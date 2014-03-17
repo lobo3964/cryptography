@@ -1,0 +1,38 @@
+		CSCI-531 APPLIED CRYPTOGRAPHY	
+HW2:					stream, encrypt, merge, decrypt
+Author:				Jie Gu
+Last Modified:		2/11/2014
+
+Files:
+	hw2.c.........contains main()
+	stream.c......simple stream cipher
+	encrypt.c.....encrypt pbm file into 2 shares, calls
+					stream. (4x expansion version)
+	merge.c.......merge two shares into 1 pbm file
+	decrypt.c.....convert merged file into its
+					orginal format
+	util.c........contains utility functions called by
+					other functions frequently
+	cmdread.c.....called by main() to process arguments
+	hw2.h.........cmdread return struct defined, and
+					all constants used by other functions
+	
+
+Compile Instruction:
+	1.	cd /source/folder/
+	2.	make hw2
+
+Known Bugs:
+	decrypt function does not check file validity bit
+	by bit, if the file is tampered the program may
+	continue as the file is normal, and output the
+	decrypted pbm file.
+	
+Compiled and tested under:
+	Valgrind-3.7.0 produce no error/memory leak
+	GCC 4.2.1
+	GCC 4.6.3
+	
+References:
+	stream.c		http://merlot.usc.edu/cs531-s14/homeworks/hw2/#stream
+	cmdread.c:		http://merlot.usc.edu/cs531-s14/misc/prog-faq/#howto_parse

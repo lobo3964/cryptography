@@ -1,0 +1,18 @@
+		CSCI-531 APPLIED CRYPTOGRAPHY	
+HW1: 					hexdump, enc-base64, dec-base64
+Author:				Jie Gu
+Last Modified:		1/22/2014
+
+Files:
+	hw1.c			contains main() and process commandline
+	hex.c			functions for hexdump
+	base64.c		base64 encode and decode
+	util.c			utility functions
+
+Compile Instruction:
+	1.	cd /source/folder/
+	2.	make
+
+Compiled and tested under:
+	GCC 4.2.1
+	GCC 4.6.3

@@ -1,0 +1,63 @@
+		CSCI-531 APPLIED CRYPTOGRAPHY	
+HW4:					keygen, crypt, invkey, histo, solve
+Author:				Jie Gu
+Last Modified:		2/26/2014
+
+Files:
+	hw4.c.........contains main()
+	crypt.c.......crypt/decrypt file with key
+	histo.c.......histogram for a specfic index
+	invkey.c......generate inverse key
+	keygen.c......generate 'random' key file
+	solve.c.......cryptanalysis report
+	util.c........contains utility functions called by
+					other functions frequently
+	cmdread.c.....called by main() to process arguments
+	hw4.h.........cmdread return struct defined, and
+					all constants used by other functions
+					
+	and:
+					
+	mystery1.invkeys
+	mystery2.invkeys
+	
+
+Cryptanalysis Report:
+	mystery1.ct:
+					run following command:
+					./hw4 solve -l=10 mystery1.ct
+					showing two spikes in auto-correlation: t=5 and t=10, 
+					then period of 5 is confirmed running histo -t=5 
+					showing most unevenly distributed percentages.
+					
+					first key file was constructed using the initial histogram
+					result, then observation started with m'kl mapped to i've.
+	
+	mystery2.ct:	
+					run following command:
+					./hw4 solve -l=10 mystery2.ct
+					does not show significant evidence of period
+					then increase max_t to 20:
+					./hw4 solve -l=20 mystery2.ct
+					showing spike in t=11, and period of 11 was confirmed 
+					running histo -t=11 showed significant different percentage
+					distributions than other period.
+					
+					first key file was constructed using the initial histogram
+					then observation was made on:
+						hater, i dihleawce bhi hetmsaed yrnu a uoith's vnnra ti deri tolm ue that the oheosrntn
+					should at least map to:
+						[later], i dihleawce bhi hetmsaed yrnu a uoith's vnnra ti deri [told me] that the oheosrntn
+						
+
+Compile Instruction:
+	1.	cd /source/folder/
+	2.	make hw4
+
+Compiled and tested under:
+	Valgrind-3.7.0 produce no error/memory leak
+	GCC 4.2.1
+	GCC 4.6.3
+	
+References:
+	cmdread.c:		http://merlot.usc.edu/cs531-s14/misc/prog-faq/#howto_parse
