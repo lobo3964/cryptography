@@ -1,0 +1,21 @@
+		CSCI-531 APPLIED CRYPTOGRAPHY	
+HW5:					tablecheck, encrypt, decrypt, encrypt3, decrypt3
+Author:				Jie Gu
+Last Modified:		3/26/2014
+
+Files:
+		hw5.c.........contains main()
+		hw5.h.........header file
+		tablecheck.c..perform the table check of the specified table file
+		des.c.........table driven DES implementation, support EDE triple
+						key encryption
+		util.c........utility functions used in this project
+						
+Compile Instruction:
+	1.	cd /source/folder/
+	2.	make hw5
+	
+Compiled and tested under:
+	Valgrind-3.7.0 produce no error/memory leak
+	GCC 4.2.1
+	GCC 4.6.3
