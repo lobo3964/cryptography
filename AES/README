@@ -1,0 +1,33 @@
+		CSCI-531 APPLIED CRYPTOGRAPHY	
+HW6:					tablecheck, modprod, keyexpand, encrypt, decrypt, inverse
+Author:				Jie Gu
+Last Modified:		4/17/2014
+
+Files:
+	aes128.c.......AES 128 bit encrypt/decrypt
+	cmdread.c......cmdread return struct defined, and
+	               all constants used by other functions
+	hw6.c..........main function
+	hw6.h..........header file
+	inverse.c......calculate the multiplicative inverse
+	keyexpand.c....key expand function for AES
+	modproduct.c...moduluo product , or circle-x
+	tablecheck.c...check the validity of table
+	util.c.........contains utility functions
+	
+
+Compile Instruction:
+	1.	cd /source/folder/
+	2.	make hw6
+
+Known Bugs:
+	None
+	
+Compiled and tested under:
+	Valgrind-3.7.0 produce no error/memory leak
+	GCC 4.2.1
+	GCC 4.6.3
+	
+References:
+	FIPS 197. Specification for the Advanced Encryption Standard (AES).
+	cmdread.c:		http://merlot.usc.edu/cs531-s14/misc/prog-faq/#howto_parse

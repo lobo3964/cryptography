@@ -30,8 +30,11 @@ typedef struct ArgvsTag {
 
 //global variable of tables
 extern unsigned char S[256];
+extern unsigned char IS[256];
 extern unsigned char P[4];
 extern unsigned char IP[4];
+extern unsigned char w[44][4];
+extern char *mi;
 
 //unsigned char xtime ( unsigned char b );
 unsigned char bd ( unsigned char a, unsigned char b );
@@ -45,3 +48,5 @@ int tablecheck ( char * tablefile );
 Argvs ParseCommandLine ( int argc, char **argv );
 int modproduct ( char p1[8], char p2[8] );
 int KeyExp(char *key, char *table_in, int print);
+int AES ( char *file_in, char *key, char *table , int mode );
+int inverse ( char *poly );

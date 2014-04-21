@@ -1,3 +1,12 @@
+/*
+ * Implementation of ModProduct or 'Circle-X'
+ * operation in AES
+ * 
+ * By Jie Gu
+ * April 17, 2014
+ * 
+ */
+
 #include "hw6.h"
 
 unsigned char xtime ( unsigned char b )

@@ -1,4 +1,13 @@
+/*
+ * AES Key Expand
+ * By Jie Gu
+ * 
+ * April 17, 2014
+ */
 #include "hw6.h"
+
+//define global
+unsigned char w[44][4];
 
 void WordXOR ( unsigned char *a, unsigned char *b )
 {
@@ -76,7 +85,7 @@ void PrintKey ( unsigned char w[44][4] )
 
 int KeyExp ( char *k, char *table_in , int print )
 {
-	unsigned char w[44][4];
+	
 	unsigned char key[16];
 	int i;
 	unsigned char val;
@@ -102,6 +111,5 @@ int KeyExp ( char *k, char *table_in , int print )
 	if ( print == YES ) {
 		PrintKey(w);
 	}
-
 	return 0;
 }

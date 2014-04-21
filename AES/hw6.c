@@ -1,3 +1,8 @@
+/*
+ * Main function for HW6
+ * By Jie Gu
+ * April 17, 2014
+ */
 #include "hw6.h"
 
 int main ( int argc, char **argv )
@@ -20,12 +25,18 @@ int main ( int argc, char **argv )
 		}
 		free ( cmd.t );
 		free ( cmd.k );
-	} else if ( cmd.mode == OP_encrypt ) {
-
-	} else if ( cmd.mode == OP_decrypt ) {
-
+	} else if ( cmd.mode == OP_encrypt || cmd.mode == OP_decrypt ) {
+		if ( AES ( cmd.file1, cmd.k, cmd.t , cmd.mode ) != 0 ) {
+			printerror ( "unknown crypto error" );
+		}
+		free ( cmd.t );
+		free ( cmd.k );
+		free ( cmd.file1 );
 	} else if ( cmd.mode == OP_inverse ) {
-
+		if ( inverse ( cmd.p1 ) != 0 ) {
+			printerror ( "unknown crypto error" );
+		}
+		free ( cmd.p1 );
 	} else {
 		printerror ( "Unknown mode error" );
 	}

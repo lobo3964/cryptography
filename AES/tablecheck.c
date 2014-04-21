@@ -1,3 +1,11 @@
+/*
+ * For Table Driven AES table checking
+ * 
+ * By Jie Gu
+ * 
+ * April 17, 2014
+ */
+
 #include "hw6.h"
 
 #define TABLELINENUM 3
