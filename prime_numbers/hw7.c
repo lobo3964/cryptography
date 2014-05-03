@@ -1,3 +1,6 @@
+/*
+ * This is the last homework of the course, I have to make comments pretty!
+ */
 #include <stdio.h>
 
 #include "hw7.h"

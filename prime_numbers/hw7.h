@@ -1,4 +1,6 @@
-
+/*
+ * This is the last homework of the course, I have to make comments pretty!
+ */
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -12,6 +14,7 @@
  * STREAM
  */
 #define STREAM_OUTPUT_LEN		8
+
 #define OP_PRIME					1
 #define OP_TRIALDIV				2
 #define OP_MILLRABIN				3

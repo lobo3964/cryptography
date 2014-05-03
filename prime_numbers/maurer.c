@@ -1,3 +1,6 @@
+/*
+ * This is the last homework of the course, I have to make comments pretty!
+ */
 #include "hw7.h"
 
 #define round(X) (((X) >= 0) ? (int)((X)+0.5) : (int)((X)-0.5))
