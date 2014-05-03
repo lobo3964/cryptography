@@ -38,6 +38,7 @@ int traildiv ( char* target, char* file_input )
 	if ( BN_bin2bn ( ( unsigned char * ) ( small_prime ), sizeof ( unsigned int ), bn_maxval ) == NULL ) {
 		printerror ( "ERR: maxval -> BN error" );
 	}
+	allNum(target);
 	BN_dec2bn ( &bn_target, target );
 
 	//printf ( "The num is %s.\n", BN_bn2dec ( bn_target ) );

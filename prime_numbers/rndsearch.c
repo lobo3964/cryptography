@@ -1,3 +1,6 @@
+/*
+ * This is the last homework of the course, I have to make comments pretty!
+ */
 #include "hw7.h"
 
 void RndOddNum ( int k, FILE* rnd_input, BIGNUM *n )
@@ -67,11 +70,14 @@ int rndsearch ( int k, int max_t, char * primefile, char * rndfile )
 		 */
 		 fprintf(stdout,"  ");
 		if ( traildiv ( BN_bn2dec ( bn_n ), primefile ) ) {
+			
+			/*
+			 * 3) if (Miller-Rabin(n,maxitr) == "prime") return(n)
+			 */
 			if (millerrabin ( BN_bn2dec ( bn_n ), max_t, primefile , 1 )){
 				return 1;
 			}
 		}
 	}
-
 	return 0;
 }

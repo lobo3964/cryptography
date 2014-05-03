@@ -77,6 +77,7 @@ Argvs ParseCommandLine ( int argc, char **argv )
 				char * pch;
 				pch = strstr ( *argv, "=" );
 				pch++;
+				allNum(pch);
 				result.k = atoi ( pch );
 				k_flag = 1;
 
@@ -88,6 +89,7 @@ Argvs ParseCommandLine ( int argc, char **argv )
 				char * pch;
 				pch = strstr ( *argv, "=" );
 				pch++;
+				allNum(pch);
 				result.t = atoi ( pch );
 				t_flag = 1;
 
@@ -98,6 +100,7 @@ Argvs ParseCommandLine ( int argc, char **argv )
 				char * pch;
 				pch = strstr ( *argv, "=" );
 				++pch;
+				allNum(pch);
 				if ( pch[0] == 0x0 ) { //NULL value
 					Usage();
 				}

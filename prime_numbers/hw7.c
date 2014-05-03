@@ -23,7 +23,9 @@ int main ( int argc, char **argv )
 		free ( cmd.file_p );
 		free ( cmd.file_r );
 	} else if ( cmd.mode == OP_MAURER ) {
-
+		maurer_control ( cmd.k, cmd.file_p, cmd.file_r );
+		free ( cmd.file_p );
+		free ( cmd.file_r );
 	} else {
 		printerror ( "Unknown mode error" );
 	}

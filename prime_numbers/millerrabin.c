@@ -64,6 +64,8 @@ int millerrabin ( char* num, int max_t, char* input_file , int AsSubRoutine )
 	} else {
 		strcpy ( prefix, "" );
 	}
+	
+	allNum(num);
 	BN_dec2bn ( &bn_target, num );
 	
 	if ( !AsSubRoutine ) {

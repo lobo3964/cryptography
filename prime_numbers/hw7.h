@@ -40,11 +40,12 @@ int prime_gen(char* maxval);
 int traildiv(char* number, char* file_input);
 int millerrabin(char* num, int max_t, char* input_file, int AsSubRoutine );
 int rndsearch(int k, int max_t, char * primefile, char * rndfile);
+void RndOddNum ( int k, FILE* rnd_input, BIGNUM *n );
+int maurer_control ( int k, char* primefile, char * rndfile );
 /*
  * helper functions
  */
 FILE* fileopen ( char *filepath );
 void printerror ( char  msg[] );
-void pbmVerify ( FILE *pbm_fp, int *width, int *height );
-void pbmheader ( FILE* fp, int width, int height );
+void allNum(char * str);
 

@@ -75,7 +75,11 @@ int prime_gen ( char* maxval )
 {
 	//TODO maxval size detection
 	int val=0;
+	allNum(maxval);
 	sscanf(maxval,"%d",&val);
+	if (val<2 || val>MAXLIMIT){
+		printerror("out of maxval limit");
+	}
 	//print maxval in word
 	printWord ( val );
 	Eratosthenes ( val );

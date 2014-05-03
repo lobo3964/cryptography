@@ -12,8 +12,8 @@ CompileOption = -I/home/scf-22/csci551b/openssl/include -lm
 
 all:	$(TARGET)
 
-$(TARGET):	$(TARGET).o prime.o traildiv.o millerrabin.o rndsearch.o cmdread.o util.o
-	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c prime.o traildiv.o millerrabin.o rndsearch.o cmdread.o util.o $(LinkOptions) $(CompileOption)
+$(TARGET):	$(TARGET).o prime.o traildiv.o millerrabin.o rndsearch.o maurer.o cmdread.o util.o
+	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c prime.o traildiv.o millerrabin.o rndsearch.o maurer.o cmdread.o util.o $(LinkOptions) $(CompileOption)
 
 prime.o:	prime.c hw7.h
 	$(CC) $(CFLAGS) -c prime.c $(CompileOption)
@@ -26,6 +26,9 @@ millerrabin.o:	millerrabin.c hw7.h
 
 rndsearch.o: rndsearch.c hw7.h
 	$(CC) $(CFLAGS) -c rndsearch.c $(CompileOption)
+
+maurer.o:	maurer.c hw7.h
+	$(CC) $(CFLAGS) -c maurer.c $(CompileOption)
 
 util.o:		util.c hw7.h
 	$(CC) $(CFLAGS) -c util.c $(CompileOption)

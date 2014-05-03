@@ -35,3 +35,12 @@ int charToHex ( char c )
 		return c - 'a' + 10;
 	}
 }
+
+void allNum(char * str){
+	int i=0;
+	for (i=0;i<strlen(str);i++){
+		if(str[i] < '0' || str[i] > '9') {
+			printerror("input contains invalid characters");
+		}
+	}
+}
