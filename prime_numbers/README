@@ -1,0 +1,32 @@
+		CSCI-531 APPLIED CRYPTOGRAPHY	
+HW7:				primes, trialdiv, millerrabin, rndsearch, maurer
+Author:				Jie Gu
+Last Modified:		5/02/2014
+
+Files:
+	
+	cmdread.c........cmdread return struct defined, and
+	                 all constants used by other functions
+	hw7.c............main function
+	hw7.h............header file
+	maurer.c.........maurer algorithm for prime generation
+	millerrabin.c....millerrabin algorithm for prime generation
+	prime.c..........sieve prime generation
+	rndsearch.c......random search prime generation
+	traildiv.c.......perform trail division
+	util.c...........contains utility functions
+	
+
+Compile Instruction:
+	1.	cd /source/folder/
+	2.	make hw7
+
+Known Bugs:
+	There might be some memory leak due to the use of BigNum, but souldnt cause any error
+	
+Compiled and tested under:
+	GCC 4.2.1
+	GCC 4.6.3
+	
+References:
+	cmdread.c:		http://merlot.usc.edu/cs531-s14/misc/prog-faq/#howto_parse
